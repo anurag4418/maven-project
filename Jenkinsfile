@@ -20,7 +20,7 @@ pipeline
 				script
 				{
 					echo "another branch"
-					c = checkout changelog: false, poll: true, scm: [$class: 'GitSCM', branches: [[name: '**']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'git_creds', url: 'https://github.com/anuragjunghare/mvn_exer_apple.git']]]
+					c = checkout changelog: false, poll: true, scm: [$class: 'GitSCM', branches: [[name: '**']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'git_creds', url: 'https://github.com/anurag4418/maven-project.git']]]
 					echo "${c}"
 					MY_BUILD_VERSION = c.GIT_COMMIT[0..4]
 					echo MY_BUILD_VERSION
