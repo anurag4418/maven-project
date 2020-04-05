@@ -77,9 +77,9 @@ pipeline
 
                     echo "Downloading new version of jar file."
 
-                    bat "D:\\Curl\\curl-7.64.1-win64-mingw\\bin\\curl -v -u admin:admin123 http://localhost:8081/nexus/service/local/repositories/domex_app_rel/content/domex/app/domex_app/${MY_BUILD_VERSION}/domex_app-${MY_BUILD_VERSION}.jar -o D:\\Tomcat8\\apache-tomcat-8.5.40\\webapps\\myapp\\my-app-${MY_BUILD_VERSION}.jar"
+                    bat "D:\\Curl\\curl-7.64.1-win64-mingw\\bin\\curl -v -u admin:admin123 http://localhost:8081/nexus/service/local/repositories/domex_app_rel/content/domex/app/domex_app/${MY_BUILD_VERSION}/domex_app-${MY_BUILD_VERSION}.jar -o D:\\Tomcat8\\apache-tomcat-8.5.40\\webapps\\myapp\\my-app.jar"
 
-                    bat "java -jar D:\\Tomcat8\\apache-tomcat-8.5.40\\webapps\\myapp\\my-app-${MY_BUILD_VERSION}.jar DEV-DEPLOYMENT"
+                    bat "java -jar D:\\Tomcat8\\apache-tomcat-8.5.40\\webapps\\myapp\\my-app.jar DEV-DEPLOYMENT"
 				}
 			}
 		}
@@ -105,9 +105,9 @@ pipeline
 
                     echo "Downloading new version of jar file."
 
-                    bat "D:\\Curl\\curl-7.64.1-win64-mingw\\bin\\curl -v -u admin:admin123 http://localhost:8081/nexus/service/local/repositories/domex_app_rel/content/domex/app/domex_app/${MY_BUILD_VERSION}/domex_app-${MY_BUILD_VERSION}.jar -o D:\\Tomcat8\\apache-tomcat-8.5.40\\webapps\\myapp\\my-app-${MY_BUILD_VERSION}.jar"
+                    bat "D:\\Curl\\curl-7.64.1-win64-mingw\\bin\\curl -v -u admin:admin123 http://localhost:8081/nexus/service/local/repositories/domex_app_rel/content/domex/app/domex_app/${MY_BUILD_VERSION}/domex_app-${MY_BUILD_VERSION}.jar -o D:\\Tomcat8\\apache-tomcat-8.5.40\\webapps\\myapp\\my-app.jar"
 
-                    bat "java -jar D:\\Tomcat8\\apache-tomcat-8.5.40\\webapps\\myapp\\my-app-${MY_BUILD_VERSION}.jar QA-DEPLOYMENT"
+                    bat "java -jar D:\\Tomcat8\\apache-tomcat-8.5.40\\webapps\\myapp\\my-app.jar QA-DEPLOYMENT"
 				}
 			}
 		}
@@ -132,13 +132,13 @@ pipeline
 	                  input message : 'Approval for staging needed'
 	                }
                 	echo "Deleting previous jar file."
-                    bat "del D:\\Tomcat8\\apache-tomcat-8.5.40\\webapps\\myapp\\my-app-${MY_BUILD_VERSION}.jar"
+                    bat "del D:\\Tomcat8\\apache-tomcat-8.5.40\\webapps\\myapp\\my-app.jar"
 
                     echo "Downloading new version of jar file."
 
-                    bat "D:\\Curl\\curl-7.64.1-win64-mingw\\bin\\curl -v -u admin:admin123 http://localhost:8081/nexus/service/local/repositories/domex_app_rel/content/domex/app/domex_app/${MY_BUILD_VERSION}/domex_app-${MY_BUILD_VERSION}.jar -o D:\\Tomcat8\\apache-tomcat-8.5.40\\webapps\\myapp\\my-app-${MY_BUILD_VERSION}.jar"
+                    bat "D:\\Curl\\curl-7.64.1-win64-mingw\\bin\\curl -v -u admin:admin123 http://localhost:8081/nexus/service/local/repositories/domex_app_rel/content/domex/app/domex_app/${MY_BUILD_VERSION}/domex_app-${MY_BUILD_VERSION}.jar -o D:\\Tomcat8\\apache-tomcat-8.5.40\\webapps\\myapp\\my-app.jar"
 
-                    bat "java -jar D:\\Tomcat8\\apache-tomcat-8.5.40\\webapps\\myapp\\my-app-${MY_BUILD_VERSION}.jar PROD-DEPLOYMENT"
+                    bat "java -jar D:\\Tomcat8\\apache-tomcat-8.5.40\\webapps\\myapp\\my-app.jar PROD-DEPLOYMENT"
 				}
 			}
 		}
