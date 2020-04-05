@@ -132,7 +132,7 @@ pipeline
 	                  input message : 'Approval for staging needed'
 	                }
                 	echo "Deleting previous jar file."
-                    bat "del D:\\Tomcat8\\apache-tomcat-8.5.40\\webapps\\myapp\\my-app.jar"
+                    bat "del D:\\Tomcat8\\apache-tomcat-8.5.40\\webapps\\myapp\\my-app-${MY_BUILD_VERSION}.jar"
 
                     echo "Downloading new version of jar file."
 
