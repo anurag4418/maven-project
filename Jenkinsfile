@@ -79,7 +79,7 @@ pipeline
 
                     bat "D:\\Curl\\curl-7.64.1-win64-mingw\\bin\\curl -v -u admin:admin123 http://localhost:8081/nexus/service/local/repositories/domex_app_rel/content/domex/app/domex_app/${MY_BUILD_VERSION}/domex_app-${MY_BUILD_VERSION}.jar -o D:\\Tomcat8\\apache-tomcat-8.5.40\\webapps\\myapp\\my-app-${MY_BUILD_VERSION}.jar"
 
-                    bat "java -jar D:\\Tomcat8\\apache-tomcat-8.5.40\\webapps\\myapp\\my-app.jar DEV-DEPLOYMENT"
+                    bat "java -jar D:\\Tomcat8\\apache-tomcat-8.5.40\\webapps\\myapp\\my-app-${MY_BUILD_VERSION}.jar DEV-DEPLOYMENT"
 				}
 			}
 		}
@@ -105,9 +105,9 @@ pipeline
 
                     echo "Downloading new version of jar file."
 
-                    bat "D:\\Curl\\curl-7.64.1-win64-mingw\\bin\\curl -v -u admin:admin123 http://localhost:8081/nexus/service/local/repositories/mvn_exer_apple_rel/content/com/fruitsinfo/mvn_exer_apple/${MY_BUILD_VERSION}/mvn_exer_apple-${MY_BUILD_VERSION}.jar -o D:\\Tomcat8\\apache-tomcat-8.5.40\\webapps\\myapp\\my-app.jar"
+                    bat "D:\\Curl\\curl-7.64.1-win64-mingw\\bin\\curl -v -u admin:admin123 http://localhost:8081/nexus/service/local/repositories/domex_app_rel/content/domex/app/domex_app/${MY_BUILD_VERSION}/domex_app-${MY_BUILD_VERSION}.jar -o D:\\Tomcat8\\apache-tomcat-8.5.40\\webapps\\myapp\\my-app-${MY_BUILD_VERSION}.jar"
 
-                    bat "java -jar D:\\Tomcat8\\apache-tomcat-8.5.40\\webapps\\myapp\\my-app.jar QA-DEPLOYMENT"
+                    bat "java -jar D:\\Tomcat8\\apache-tomcat-8.5.40\\webapps\\myapp\\my-app-${MY_BUILD_VERSION}.jar QA-DEPLOYMENT"
 				}
 			}
 		}
@@ -136,9 +136,9 @@ pipeline
 
                     echo "Downloading new version of jar file."
 
-                    bat "D:\\Curl\\curl-7.64.1-win64-mingw\\bin\\curl -v -u admin:admin123 http://localhost:8081/nexus/service/local/repositories/mvn_exer_apple_rel/content/com/fruitsinfo/mvn_exer_apple/${MY_BUILD_VERSION}/mvn_exer_apple-${MY_BUILD_VERSION}.jar -o D:\\Tomcat8\\apache-tomcat-8.5.40\\webapps\\myapp\\my-app.jar"
+                    bat "D:\\Curl\\curl-7.64.1-win64-mingw\\bin\\curl -v -u admin:admin123 http://localhost:8081/nexus/service/local/repositories/domex_app_rel/content/domex/app/domex_app/${MY_BUILD_VERSION}/domex_app-${MY_BUILD_VERSION}.jar -o D:\\Tomcat8\\apache-tomcat-8.5.40\\webapps\\myapp\\my-app-${MY_BUILD_VERSION}.jar"
 
-                    bat "java -jar D:\\Tomcat8\\apache-tomcat-8.5.40\\webapps\\myapp\\my-app.jar PRD-DEPLOYMENT"
+                    bat "java -jar D:\\Tomcat8\\apache-tomcat-8.5.40\\webapps\\myapp\\my-app-${MY_BUILD_VERSION}.jar PROD-DEPLOYMENT"
 				}
 			}
 		}
