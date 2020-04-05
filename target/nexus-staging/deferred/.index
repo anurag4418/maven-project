@@ -1,1 +1,1 @@
-domex/app/1.0.0/app-1.0.0.jar=domex:app:1.0.0:n/a:jar:jar:app-1.0.0.pom:n/a
+domex/app/1.0.1/app-1.0.1.jar=domex:app:1.0.1:n/a:jar:jar:app-1.0.1.pom:n/a:releases:http://localhost:8081/nexus/content/repositories/domex_app_rel/
