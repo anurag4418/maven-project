@@ -1,4 +1,4 @@
-package jar;
+package domex;
 
 /**
  * Hello world!
