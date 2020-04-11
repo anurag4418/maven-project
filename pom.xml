@@ -84,7 +84,7 @@
           <manifest>
             <addClasspath>true</addClasspath>
             <classpathPrefix>lib/</classpathPrefix>
-            <mainClass>com.fruitsinfo.App</mainClass>
+            <mainClass>domex.App</mainClass>
           </manifest>
         </archive>
       </configuration>
